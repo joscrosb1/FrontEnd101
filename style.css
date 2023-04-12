@@ -53,21 +53,25 @@ body {
   /* Navigation */
   header {
     background-color: #ff385c;
-    padding: 20px;
-    text-align: center;
+    padding: 0px;
+    text-align: left;
     position: relative;
   }
   
   .logo {
     font-family: "Pangolin", cursive;
-    font-size: 72px;
+    font-size: 60px;
     color: #fff;
+    position: relative; 
+    
+    
   }
   
   header nav {
     margin: 0 auto;
     max-width: 800px;
     position: absolute;
+    margin-top: -20px;;
     bottom: 0;
     right: 0;
   }
@@ -87,7 +91,7 @@ body {
     font-size: 18px;
     color: #fff;
     text-decoration: none;
-    padding: 0 20px;
+    padding: 0 0px;
   }
   
   header nav ul li a:hover {
@@ -98,12 +102,12 @@ body {
   /* Search Form */
   form {
     border: 2px solid #ff385c;
-    padding: 10px;
+    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: -5px;
     background-color: #f8f9fa;
   }
   
@@ -498,6 +502,50 @@ body {
       margin-bottom: 1rem;
     }
   }
+    
+ 
   
+  .logo {
+   
+    bottom: 0;
+    left: 0;
+  }
   
+  #stay h2 {
+    padding: 10px
+  }
+
+  /* ... */
+
+/* Responsive navigation */
+@media screen and (max-width: 767px) {
+  .logo {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px; /* add space between the logo and the navigation */
+  }
+
+  header nav {
+    position: relative;
+    width: 100%;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  header nav ul li {
+    padding: 0 10px;
+  }
+
+  header nav ul li a {
+    font-size: 16px;
+  }
+}
+
+
   

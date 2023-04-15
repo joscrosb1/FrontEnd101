@@ -207,7 +207,7 @@ footer p {
   }
 
   #ideas img{
-    height: 600px;
+    height: 500px;
     width: auto;
   }
 
@@ -241,8 +241,8 @@ footer p {
 
   
   #about img {
-    height: 300px;
-    width: auto;
+    height: 200px;
+    width: 350px;
     flex: 1;
   }
   
@@ -250,7 +250,8 @@ footer p {
   #about p {
   margin: 50px;
   flex: 1;
-  font-size:19px
+  font-size:17px
+  
   }
   
   section#about {
@@ -265,6 +266,38 @@ footer p {
   flex-basis: 100%;
   text-align: center;
   }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about-images {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about-images {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 480px) {
+    .about-images {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .about-images img {
+      width: 45%;
+    }
+    .about-text {
+      margin-top: 20px;
+    }
+  }
+  
+  
+  
 
    
   /* -------  Media Query for Ideas section ------- */
@@ -310,7 +343,7 @@ footer p {
   }
 
   #about p {
-    margin: 20px;
+    margin: 22px;
     font-size: 18px
 }
 
@@ -342,32 +375,23 @@ form select  {
 }
 
 @media all and (max-width: 768px) {
-  #ideas .row, #about div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  
 
-  #ideas .col, #about img {
+  #ideas .col, #about  {
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
-  #ideas img, #about img {
+  #ideas img, #about  {
     width: 100%;
     height: auto;
     margin-bottom: 30px; /* Add spacing below the images */
   }
-
-  #about img:last-child {
-    margin-bottom: 1; /* Remove the margin from the last image */
-  }
-
-  #about p {
-    margin: 20px;
-    font-size: 18px
+  #about .about-text {
+    text-align: left 
+     }
 }
-
+  
 form > div {
   display: flex;
   align-items: center; /* Add this line */
@@ -390,6 +414,435 @@ form select  {
 
 }
 
+
+
+@media (min-width:  {
+  #about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+  }
+  
+  #ideas .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  #ideas .col {
+    width: 48%;
+  }
+
+  #about .about-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+@media (min-width: 480px) and (max-width: 769px) {
+  #about .about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 769px) {
+  .about-images {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 479px) {
+  .about-images {
+    flex-direction: row;
+  }
+}
+
+/* Add or modify the following CSS rules */
+#about .about-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 769px) {
+  #about .about-content {
+    flex-direction: row;
+  }
+
+  .about-images {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+@media (max-width: 769px) {
+  #about .about-content {
+    flex-direction: column-reverse;
+     ;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .about-images img {
+    height: 200px;
+    width: auto;
+  }
+
+  #about p {
+    margin: 0 20px;
+    flex: 1;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  #about .about-text {
+    text-align: center;
+  }
+}
+
+#about .about-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 769px) {
+  #about .about-content {
+    flex-direction: row;
+  }
+
+  .about-images {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+#about .about-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 769px) {
+ 
+}
+
+@media (max-width: 769px) {
+  #about .about-content {
+    flex-direction: column-reverse;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .about-images img {
+    height: 200px;
+    width: auto;
+  }
+
+  #about .about-text {
+    text-align: center;
+  }
+
+  #about .about-content {
+    justify-content: space-between;
+  }
+
+  .about-images img:first-child {
+    order: 2;
+  }
+
+  .about-images img:last-child {
+    order: 1;
+  }
+
+  #about p {
+    margin: 0 20px;
+    flex: 1;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  #about .about-text {
+    text-align: left;
+  }
+}
+
+/* Add or modify the following CSS rules */
+#about .about-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 769px) {
+  #about .about-content {
+    flex-direction: row;
+  }
+
+  .about-images {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  #about .about-content {
+    flex-direction: column-reverse;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .about-images img {
+    height: 200px;
+    width: auto;
+  }
+
+  #about p {
+    margin: 0 20px;
+    flex: 1;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  
+
+/* Add or modify the following CSS rules */
+#about .about-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 480px) {
+  #about .about-content {
+    flex-direction: row;
+  }
+
+  .about-images {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  #about .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .about-images img {
+    height: 200px;
+    width: auto;
+  }
+
+  #about p {
+    margin: 0 20px;
+    flex: 1;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  #about .about-text {
+    text-align: left;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1023px) {
+  #about .about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .about-images img {
+    height: 200px;
+    width: auto;
+  }
+
+  #about p {
+    margin: 0 20px;
+    flex: 1;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  #about .about-text {
+    text-align: left;
+  }
+}
+
+@media (min-width: 480px) {
+  #about .about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .about-images img {
+    height: 200px;
+    width: auto;
+  }
+
+  #about p {
+    margin: 0 20px;
+    flex: 1;
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;
+}
+
+#about h2 {
+  text-align: center;
+}
+
+
+/* About section */
+
+.primary-bg {
+  padding: 2rem 0;
+}
+
+
+
+.about-images img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+@media (max-width: 480px) {
+  .about-images {
+    width: 90%;
+  }
+}
+ 
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media all and (max-width: 480px) {
+  .about-content {
+    max-width: 100%;
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+  .about-content {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
 
 
 
